@@ -1,0 +1,8 @@
+MPESA_CONSUMER_KEY: 'MKOQpRWttugAzAxkZ6lv1t55r4B0kBhEJi9kjKV0uXKp9nvH'
+MPESA_CONSUMER_SECRET: 'zTFpLZFgdaYpwF5NgjOHNAif2SslnkixGUIryAgtzCRsjI8xqCJ0or5UFPXGdDam'
+MPESA_PASSKEY: 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919'
+MPESA_SHORTCODE: '174379'
+MPESA_INITIATOR_NAME: 'testapi'
+MPESA_INITIATOR_PASSWORD: 'Safaricom999!*!'
+CALLBACK_URL: 'https://3bca-41-90-66-64.ngrok-free.app'
+REGISTER_URL: "https://sandbox.safaricom.co.ke/mpesa/c2b/v1/registerurl"
