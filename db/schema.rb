@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_11_18_201724) do
+ActiveRecord::Schema[7.1].define(version: 2024_11_24_055238) do
   create_table "access_tokens", force: :cascade do |t|
     t.string "token"
     t.datetime "created_at", null: false
@@ -21,6 +21,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_18_201724) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "event_date"
+    t.string "venue"
+    t.text "description"
+    t.decimal "ticket_price"
+    t.integer "available_tickets"
   end
 
   create_table "mpesas", force: :cascade do |t|
@@ -44,11 +49,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_18_201724) do
   create_table "tickets", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.boolean "paid"
-    t.integer "event_id"
+    t.string "email"
+    t.integer "quantity"
     t.integer "price"
+    t.string "ticket_type"
+    t.string "payment_type"
+    t.string "phone_number"
+    t.boolean "payment_status", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "event_id"
   end
 
 end

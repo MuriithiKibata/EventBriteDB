@@ -10,6 +10,8 @@ Rails.application.configure do
  
   # Do not eager load code on boot.
   config.eager_load = false
+  # This allows us to access our rails app from ngrok::config
+  # config.hosts << /[a-z0-9]+\.ngrok\.io/
   config.hosts.clear
   # Show full error reports.
   config.consider_all_requests_local = true
