@@ -161,6 +161,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.7-x86_64-linux)
       racc (~> 1.4)
+    pg (1.5.9)
     psych (5.2.0)
       stringio
     puma (6.4.3)
@@ -259,6 +260,7 @@ DEPENDENCIES
   bootsnap
   debug
   image_processing (~> 1.2)
+  pg
   puma (>= 5.0)
   rack-cors
   rails (~> 7.1.4)
