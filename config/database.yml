@@ -24,4 +24,4 @@ production:
   <<: *default
   database: event-brite,
   username: event-brite,
-  password: aXG6aEgG5h7M0H43RVUhdU3LFCwlyGRj
+  password: <%= ENV['EVENT_BRITE_PASSWORD'] %>
