@@ -15,12 +15,12 @@ class TicketsController < ApplicationController
 
   # POST /tickets
   def create
-    @ticket = Ticket.new(ticket_params)
+    @ticket = Ticket.new(ticket_params.merge(event_id: params[:event_id].to_i))
 
     if @ticket.save
       render json: @ticket, status: :created, location: @ticket
     else
-      render json: @ticket.errors, status: :unprocessable_entity
+      render json: @ticket.errors.full_messages, status: :unprocessable_entity
     end
   end
 

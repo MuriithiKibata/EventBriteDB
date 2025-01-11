@@ -8,7 +8,7 @@ class MpesaController < ApplicationController
 def stkpush
     Rails.logger.info "Received phone number: #{params[:phoneNumber]}"
     ticket = Ticket.find_by(phone_number: params[:phoneNumber], payment_status: false)
-
+    puts ticket.phone_number
     # I'm trying to check if the ticket already exists or is nil
     if ticket.nil?
         Rails.logger.warn "No ticket found for phone number: #{params[:phoneNumber]}"
@@ -19,8 +19,8 @@ def stkpush
     # Proceed to get the total
     total_amount = ticket.price * ticket.quantity
 
-    phoneNumber = params[:phoneNumber]
-    amount = 1
+    phoneNumber = ticket.phone_number
+    amount = total_amount
     url = "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest"
     timestamp = "#{Time.now.strftime "%Y%m%d%H%M%S"}"
     business_short_code = ENV["MPESA_SHORTCODE"]

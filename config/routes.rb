@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :mpesas
   resources :ticket_statuses
+ 
   # update route
   resources :events do
     member do
